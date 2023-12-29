@@ -30,7 +30,6 @@ import (
 	"code.gitea.io/gitea/services/auth"
 	"code.gitea.io/gitea/services/auth/source/oauth2"
 	"code.gitea.io/gitea/services/automerge"
-	"code.gitea.io/gitea/services/cron"
 	feed_service "code.gitea.io/gitea/services/feed"
 	indexer_service "code.gitea.io/gitea/services/indexer"
 	"code.gitea.io/gitea/services/mailer"
@@ -44,6 +43,7 @@ import (
 	"code.gitea.io/gitea/services/task"
 	"code.gitea.io/gitea/services/uinotification"
 	"code.gitea.io/gitea/services/webhook"
+	"github.com/openmerlin/gitea_data/routers/private"
 	web_routers "github.com/openmerlin/gitea_data/routers/web"
 )
 
@@ -159,7 +159,7 @@ func InitWebInstalled(ctx context.Context) {
 	actions_service.Init()
 
 	// Finally start up the cron
-	cron.NewContext(ctx)
+	//cron.NewContext(ctx)
 }
 
 // NormalRoutes represents non install routes
@@ -168,6 +168,7 @@ func NormalRoutes() *web.Route {
 	r.Use(common.ProtocolMiddlewares()...)
 
 	r.Mount("/", web_routers.Routes())
+	r.Mount("/api/internal", private.Routes())
 
 	return r
 }

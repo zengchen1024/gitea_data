@@ -128,6 +128,7 @@ func NewMainApp(version, versionExtra string) *cli.App {
 	// these sub-commands need to use config file
 	subCmdWithConfig := []*cli.Command{
 		CmdWeb,
+		CmdHook,
 		cmdHelp(), // the "help" sub-command was used to show the more information for "work path" and "custom config"
 	}
 
