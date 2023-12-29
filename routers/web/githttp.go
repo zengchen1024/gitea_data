@@ -9,8 +9,8 @@ import (
 	"code.gitea.io/gitea/modules/context"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/web"
-	"code.gitea.io/gitea/routers/web/repo"
 	context_service "code.gitea.io/gitea/services/context"
+	"github.com/openmerlin/gitea_data/routers/web/repo"
 )
 
 func requireSignIn(ctx *context.Context) {

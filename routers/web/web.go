@@ -16,11 +16,9 @@ import (
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/routers/common"
-	"code.gitea.io/gitea/routers/web/misc"
-	"code.gitea.io/gitea/routers/web/repo"
-	"code.gitea.io/gitea/routers/web/user"
 	auth_service "code.gitea.io/gitea/services/auth"
 	"code.gitea.io/gitea/services/lfs"
+	"github.com/openmerlin/gitea_data/routers/web/misc"
 
 	_ "code.gitea.io/gitea/modules/session" // to registers all internal adapters
 
@@ -227,8 +225,6 @@ func Routes() *web.Route {
 	}
 
 	// TODO: These really seem like things that could be folded into Contexter or as helper functions
-	mid = append(mid, user.GetNotificationCount)
-	mid = append(mid, repo.GetActiveStopwatch)
 	mid = append(mid, goGet)
 
 	others := web.NewRoute()
@@ -242,9 +238,6 @@ var ignSignInAndCsrf = verifyAuthWithOptions(&common.VerifyOptions{DisableCSRF: 
 
 // registerRoutes register routes
 func registerRoutes(m *web.Route) {
-	// TODO: rename them to "optSignIn", which means that the "sign-in" could be optional, depends on the VerifyOptions (RequireSignInView)
-	ignSignIn := verifyAuthWithOptions(&common.VerifyOptions{SignInRequired: setting.Service.RequireSignInView})
-
 	validation.AddBindingRules()
 
 	lfsServerEnabled := func(ctx *context.Context) {
@@ -259,10 +252,6 @@ func registerRoutes(m *web.Route) {
 	}
 
 	m.Group("/{username}", func() {
-		m.Group("/{reponame}", func() {
-			m.Get("", repo.SetEditorconfigIfExists, repo.Home)
-		}, ignSignIn, context.RepoAssignment, context.RepoRef(), context.UnitTypes())
-
 		m.Group("/{reponame}", func() {
 			m.Group("/info/lfs", func() {
 				m.Post("/objects/batch", lfs.CheckAcceptMediaType, lfs.BatchHandler)
