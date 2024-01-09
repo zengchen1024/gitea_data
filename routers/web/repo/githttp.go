@@ -18,7 +18,6 @@ import (
 	"sync"
 	"time"
 
-	actions_model "code.gitea.io/gitea/models/actions"
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/perm"
 	repo_model "code.gitea.io/gitea/models/repo"
@@ -32,6 +31,8 @@ import (
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
 	access_model "github.com/openmerlin/gitea_data/models/perm/access"
+
+	actions_model "github.com/openmerlin/gitea_data/models/actions"
 
 	"github.com/go-chi/cors"
 )
