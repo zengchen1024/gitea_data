@@ -18,7 +18,8 @@ import (
 	"sync"
 	"time"
 
-	actions_model "code.gitea.io/gitea/models/actions"
+	actions_model "github.com/openmerlin/gitea_data/routers/models/actions"
+
 	auth_model "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/perm"
 	access_model "code.gitea.io/gitea/models/perm/access"
