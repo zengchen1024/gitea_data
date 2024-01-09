@@ -31,7 +31,7 @@ import (
 	"code.gitea.io/gitea/modules/structs"
 	"code.gitea.io/gitea/modules/util"
 	repo_service "code.gitea.io/gitea/services/repository"
-	access_model "github.com/openmerlin/gitea_data/routers/models/perm/access"
+	access_model "github.com/openmerlin/gitea_data/models/perm/access"
 
 	"github.com/go-chi/cors"
 )
