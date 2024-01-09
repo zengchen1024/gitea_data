@@ -19,7 +19,6 @@ import (
 	"time"
 
 	repo_model "code.gitea.io/gitea/models/repo"
-	"code.gitea.io/gitea/models/unit"
 	"code.gitea.io/gitea/modules/context"
 	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
@@ -33,6 +32,7 @@ import (
 	actions_model "github.com/openmerlin/gitea_data/models/actions"
 	auth_model "github.com/openmerlin/gitea_data/models/auth"
 	"github.com/openmerlin/gitea_data/models/perm"
+	"github.com/openmerlin/gitea_data/models/unit"
 
 	"github.com/go-chi/cors"
 )
