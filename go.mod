@@ -8,28 +8,16 @@ require (
 	code.gitea.io/gitea v1.21.3
 	gitea.com/go-chi/binding v0.0.0-20230415142243-04b515c6d669
 	gitea.com/go-chi/captcha v0.0.0-20230415143339-2c0754df4384
-	gitea.com/go-chi/session v0.0.0-20230613035928-39541325faa3
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/felixge/fgprof v0.9.3
 	github.com/go-chi/chi/v5 v5.0.11
 	github.com/go-chi/cors v1.2.1
-	github.com/go-enry/go-enry/v2 v2.8.6
-	github.com/go-webauthn/webauthn v0.10.0
-	github.com/gobwas/glob v0.2.3
 	github.com/golang-jwt/jwt/v5 v5.2.0
-	github.com/gorilla/feeds v1.1.2
-	github.com/keybase/go-crypto v0.0.0-20200123153347-de78d2cb44f4
-	github.com/markbates/goth v1.78.0
-	github.com/nektos/act v0.2.56
-	github.com/pquerna/otp v1.4.0
+	github.com/golang/gddo v0.0.0-20210115222349-20d68f94ee1f
+	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
 	github.com/prometheus/client_golang v1.18.0
-	github.com/sergi/go-diff v1.3.1
 	github.com/stretchr/testify v1.8.4
 	github.com/urfave/cli/v2 v2.27.0
-	golang.org/x/image v0.14.0
-	golang.org/x/oauth2 v0.15.0
-	xorm.io/builder v0.3.13
-	xorm.io/xorm v1.3.4
 )
 
 require (
@@ -40,6 +28,7 @@ require (
 	codeberg.org/gusted/mcaptcha v0.0.0-20220723083913-4f3072e1d570 // indirect
 	dario.cat/mergo v1.0.0 // indirect
 	gitea.com/go-chi/cache v0.2.0 // indirect
+	gitea.com/go-chi/session v0.0.0-20230613035928-39541325faa3 // indirect
 	gitea.com/lunny/dingtalk_webhook v0.0.0-20171025031554-e3534c89ef96 // indirect
 	gitea.com/lunny/levelqueue v0.4.2-0.20230414023320-3c0159fe0fe4 // indirect
 	github.com/42wim/sshsig v0.0.0-20211121163825-841cf5bbc121 // indirect
@@ -106,6 +95,7 @@ require (
 	github.com/go-ap/activitypub v0.0.0-20231114162308-e219254dc5c9 // indirect
 	github.com/go-asn1-ber/asn1-ber v1.5.5 // indirect
 	github.com/go-co-op/gocron v1.37.0 // indirect
+	github.com/go-enry/go-enry/v2 v2.8.6 // indirect
 	github.com/go-enry/go-oniguruma v1.2.1 // indirect
 	github.com/go-faster/city v1.0.1 // indirect
 	github.com/go-faster/errors v0.7.1 // indirect
@@ -115,8 +105,11 @@ require (
 	github.com/go-git/go-git/v5 v5.11.0 // indirect
 	github.com/go-ldap/ldap/v3 v3.4.6 // indirect
 	github.com/go-sql-driver/mysql v1.7.1 // indirect
+	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/go-testfixtures/testfixtures/v3 v3.9.0 // indirect
+	github.com/go-webauthn/webauthn v0.10.0 // indirect
 	github.com/go-webauthn/x v0.1.6 // indirect
+	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/gogs/chardet v0.0.0-20211120154057-b7413eaefb8f // indirect
 	github.com/gogs/go-gogs-client v0.0.0-20210131175652-1d7215cd8d85 // indirect
@@ -133,6 +126,7 @@ require (
 	github.com/google/pprof v0.0.0-20231212022811-ec68065c825e // indirect
 	github.com/google/uuid v1.5.0 // indirect
 	github.com/gorilla/css v1.0.1 // indirect
+	github.com/gorilla/feeds v1.1.2 // indirect
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
 	github.com/gorilla/sessions v1.2.2 // indirect
@@ -142,18 +136,20 @@ require (
 	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/huandu/xstrings v1.4.0 // indirect
+	github.com/inconshreveable/log15 v0.0.0-20170622235902-74a0988b5f80 // indirect
 	github.com/jaytaylor/html2text v0.0.0-20230321000545-74c2419ad056 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
 	github.com/jhillyerd/enmime v1.1.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
+	github.com/keybase/go-crypto v0.0.0-20200123153347-de78d2cb44f4 // indirect
 	github.com/klauspost/compress v1.17.4 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.6 // indirect
 	github.com/lib/pq v1.10.9 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/markbates/going v1.0.3 // indirect
+	github.com/markbates/goth v1.78.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-runewidth v0.0.15 // indirect
@@ -171,6 +167,7 @@ require (
 	github.com/mrjones/oauth v0.0.0-20190623134757-126b35219450 // indirect
 	github.com/mschoch/smat v0.2.0 // indirect
 	github.com/msteinert/pam v1.2.0 // indirect
+	github.com/nektos/act v0.2.56 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/olivere/elastic/v7 v7.0.32 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
@@ -180,6 +177,7 @@ require (
 	github.com/pjbgf/sha1cd v0.3.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
+	github.com/pquerna/otp v1.4.0 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.45.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
@@ -194,6 +192,7 @@ require (
 	github.com/santhosh-tekuri/jsonschema/v5 v5.3.1 // indirect
 	github.com/sassoftware/go-rpmutils v0.2.0 // indirect
 	github.com/segmentio/asm v1.2.0 // indirect
+	github.com/sergi/go-diff v1.3.1 // indirect
 	github.com/shopspring/decimal v1.3.1 // indirect
 	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/skeema/knownhosts v1.2.1 // indirect
@@ -216,10 +215,11 @@ require (
 	go.etcd.io/bbolt v1.3.8 // indirect
 	go.opentelemetry.io/otel v1.21.0 // indirect
 	go.opentelemetry.io/otel/trace v1.21.0 // indirect
-	go.uber.org/atomic v1.11.0 // indirect
 	golang.org/x/crypto v0.17.0 // indirect
+	golang.org/x/image v0.14.0 // indirect
 	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.19.0 // indirect
+	golang.org/x/oauth2 v0.15.0 // indirect
 	golang.org/x/sync v0.5.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
@@ -237,4 +237,6 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	mvdan.cc/xurls/v2 v2.5.0 // indirect
 	strk.kbt.io/projects/go/libravatar v0.0.0-20191008002943-06d1c002b251 // indirect
+	xorm.io/builder v0.3.13 // indirect
+	xorm.io/xorm v1.3.4 // indirect
 )
