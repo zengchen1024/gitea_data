@@ -1,3 +1,6 @@
+// Copyright 2018 The Gitea Authors. All rights reserved.
+// SPDX-License-Identifier: MIT
+
 package access
 
 import (
@@ -5,17 +8,14 @@ import (
 
 	"code.gitea.io/gitea/models/organization"
 	perm_model "code.gitea.io/gitea/models/perm"
+	access_model "code.gitea.io/gitea/models/perm/access"
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/models/unit"
 	user_model "code.gitea.io/gitea/models/user"
 	"code.gitea.io/gitea/modules/log"
 )
 
-type Permission struct {
-	AccessMode perm_model.AccessMode
-	Units      []*repo_model.RepoUnit
-	UnitsMode  map[unit.Type]perm_model.AccessMode
-}
+type Permission = access_model.Permission
 
 // GetUserRepoPermission returns the user permissions to the repository
 func GetUserRepoPermission(ctx context.Context, repo *repo_model.Repository, user *user_model.User) (Permission, error) {
@@ -149,21 +149,4 @@ func GetUserRepoPermission(ctx context.Context, repo *repo_model.Repository, use
 	}
 
 	return perm, err
-}
-
-func (p *Permission) CanAccess(mode perm_model.AccessMode, unitType unit.Type) bool {
-	return p.UnitAccessMode(unitType) >= mode
-}
-
-// UnitAccessMode returns current user accessmode to the specify unit of the repository
-func (p *Permission) UnitAccessMode(unitType unit.Type) perm_model.AccessMode {
-	if p.UnitsMode == nil {
-		for _, u := range p.Units {
-			if u.Type == unitType {
-				return p.AccessMode
-			}
-		}
-		return perm_model.AccessModeNone
-	}
-	return p.UnitsMode[unitType]
 }
