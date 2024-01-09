@@ -2,7 +2,6 @@ package git
 
 import (
 	"context"
-	"time"
 
 	"github.com/openmerlin/gitea_data/routers/modules/git/internal" //nolint:depguard // only this file can use the internal type CmdArg, other files and packages should use AddXxx functions
 )
@@ -12,9 +11,6 @@ type TrustedCmdArgs []internal.CmdArg
 var (
 	// globalCommandArgs global command args for external package setting
 	globalCommandArgs TrustedCmdArgs
-
-	// defaultCommandExecutionTimeout default command execution timeout duration
-	defaultCommandExecutionTimeout = 360 * time.Second
 )
 
 type Command struct {
