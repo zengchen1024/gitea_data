@@ -22,10 +22,10 @@ import (
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/structs"
-	repo_service "code.gitea.io/gitea/services/repository"
 	access_model "github.com/openmerlin/gitea_data/models/perm/access"
 	repo_module "github.com/openmerlin/gitea_data/modules/repository"
 	"github.com/openmerlin/gitea_data/modules/util"
+	repo_service "github.com/openmerlin/gitea_data/services/repository"
 
 	actions_model "github.com/openmerlin/gitea_data/models/actions"
 	auth_model "github.com/openmerlin/gitea_data/models/auth"
