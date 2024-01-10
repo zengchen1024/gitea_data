@@ -18,7 +18,6 @@ import (
 	"sync"
 	"time"
 
-	"code.gitea.io/gitea/modules/git"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/structs"
 
@@ -29,6 +28,7 @@ import (
 	repo_model "github.com/openmerlin/gitea_data/models/repo"
 	"github.com/openmerlin/gitea_data/models/unit"
 	"github.com/openmerlin/gitea_data/modules/context"
+	"github.com/openmerlin/gitea_data/modules/git"
 	repo_module "github.com/openmerlin/gitea_data/modules/repository"
 	"github.com/openmerlin/gitea_data/modules/setting"
 	"github.com/openmerlin/gitea_data/modules/util"
