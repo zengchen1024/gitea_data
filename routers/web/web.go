@@ -11,14 +11,15 @@ import (
 	"code.gitea.io/gitea/modules/context"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/metrics"
-	"code.gitea.io/gitea/modules/setting"
 	"code.gitea.io/gitea/modules/validation"
 	"code.gitea.io/gitea/modules/web"
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/routers/common"
 	auth_service "code.gitea.io/gitea/services/auth"
-	"code.gitea.io/gitea/services/lfs"
+	"github.com/openmerlin/gitea_data/modules/setting"
+
 	"github.com/openmerlin/gitea_data/routers/web/misc"
+	"github.com/openmerlin/gitea_data/services/lfs"
 
 	_ "code.gitea.io/gitea/modules/session" // to registers all internal adapters
 
@@ -161,7 +162,7 @@ func verifyAuthWithOptions(options *common.VerifyOptions) func(ctx *context.Cont
 
 		// Redirect to log in page if auto-signin info is provided and has not signed in.
 		if !options.SignOutRequired && !ctx.IsSigned &&
-			len(ctx.GetSiteCookie(setting.CookieUserName)) > 0 {
+			ctx.GetSiteCookie(setting.CookieRememberName) != "" {
 			if ctx.Req.URL.Path != "/user/events" {
 				middleware.SetRedirectToCookie(ctx.Resp, setting.AppSubURL+ctx.Req.URL.RequestURI())
 			}
