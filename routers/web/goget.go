@@ -11,10 +11,16 @@ import (
 	"path"
 	"strings"
 
+<<<<<<< HEAD
 	"code.gitea.io/gitea/modules/context"
 	"github.com/openmerlin/gitea_data/modules/setting"
 	"code.gitea.io/gitea/modules/util"
+=======
+	"code.gitea.io/gitea/modules/setting"
+>>>>>>> 3b5da5c (update routers/goget/context && util/util.PathEscapeSegments)
 	repo_model "github.com/openmerlin/gitea_data/models/repo"
+	"github.com/openmerlin/gitea_data/modules/context"
+	"github.com/openmerlin/gitea_data/modules/util"
 )
 
 func goGet(ctx *context.Context) {
