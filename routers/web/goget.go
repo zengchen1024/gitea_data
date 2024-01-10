@@ -11,10 +11,10 @@ import (
 	"path"
 	"strings"
 
-	"code.gitea.io/gitea/modules/context"
-	"github.com/openmerlin/gitea_data/modules/setting"
-	"code.gitea.io/gitea/modules/util"
 	repo_model "github.com/openmerlin/gitea_data/models/repo"
+	"github.com/openmerlin/gitea_data/modules/context"
+	"github.com/openmerlin/gitea_data/modules/setting"
+	"github.com/openmerlin/gitea_data/modules/util"
 )
 
 func goGet(ctx *context.Context) {
