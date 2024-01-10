@@ -13,8 +13,7 @@ import (
 	"code.gitea.io/gitea/modules/util"
 )
 
-// Type represents an login type.
-type Type models_auth.Type
+type Type = models_auth.Type
 
 // Note: new type must append to the end of list to maintain compatibility.
 const (
