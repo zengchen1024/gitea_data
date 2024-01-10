@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"code.gitea.io/gitea/modules/context"
-	"code.gitea.io/gitea/modules/setting"
+	"github.com/openmerlin/gitea_data/modules/setting"
 	"code.gitea.io/gitea/modules/util"
 	repo_model "github.com/openmerlin/gitea_data/models/repo"
 )

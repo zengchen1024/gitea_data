@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"code.gitea.io/gitea/modules/context"
-	"code.gitea.io/gitea/modules/setting"
+	"github.com/openmerlin/gitea_data/modules/setting"
 	"code.gitea.io/gitea/modules/web"
 	context_service "code.gitea.io/gitea/services/context"
 	"github.com/openmerlin/gitea_data/routers/web/repo"
