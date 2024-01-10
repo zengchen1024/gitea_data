@@ -16,7 +16,6 @@ import (
 	"code.gitea.io/gitea/modules/web/middleware"
 	"code.gitea.io/gitea/routers/common"
 	auth_service "code.gitea.io/gitea/services/auth"
-	"code.gitea.io/gitea/services/lfs"
 	auth_model "github.com/openmerlin/gitea_data/models/auth"
 	"github.com/openmerlin/gitea_data/modules/setting"
 	"github.com/openmerlin/gitea_data/routers/web/misc"
