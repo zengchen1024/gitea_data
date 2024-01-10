@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"code.gitea.io/gitea/modules/log"
-	"code.gitea.io/gitea/modules/setting"
+	"github.com/openmerlin/gitea_data/modules/setting"
 
 	"github.com/urfave/cli/v2"
 

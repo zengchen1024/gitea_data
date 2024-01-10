@@ -14,7 +14,7 @@ import (
 
 	repo_model "code.gitea.io/gitea/models/repo"
 	"code.gitea.io/gitea/modules/log"
-	"code.gitea.io/gitea/modules/setting"
+	"github.com/openmerlin/gitea_data/modules/setting"
 )
 
 // ComposeGoGetImport returns go-get-import meta content.
