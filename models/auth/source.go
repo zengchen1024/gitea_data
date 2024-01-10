@@ -7,10 +7,11 @@ package auth
 import (
 	"context"
 
+	models_auth "code.gitea.io/gitea/models/auth"
 	"code.gitea.io/gitea/models/db"
-	models_auth "code.gitea.io/gitea/modules/auth"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/util"
+	"xorm.io/builder"
 )
 
 type Type = models_auth.Type
@@ -29,7 +30,21 @@ const (
 
 type Source = models_auth.Source
 
-type FindSourcesOptions = models_auth.FindSourcesOptions
+type FindSourcesOptions struct {
+	IsActive  util.OptionalBool
+	LoginType Type
+}
+
+func (opts FindSourcesOptions) ToConds() builder.Cond {
+	conds := builder.NewCond()
+	if !opts.IsActive.IsNone() {
+		conds = conds.And(builder.Eq{"is_active": opts.IsActive.IsTrue()})
+	}
+	if opts.LoginType != NoType {
+		conds = conds.And(builder.Eq{"`type`": opts.LoginType})
+	}
+	return conds
+}
 
 // FindSources returns a slice of login sources found in DB according to given conditions.
 func FindSources(ctx context.Context, opts FindSourcesOptions) ([]*Source, error) {
