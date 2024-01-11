@@ -4,8 +4,8 @@
 package web
 
 import (
-	"code.gitea.io/gitea/modules/context"
 	"github.com/openmerlin/gitea_data/modules/base"
+	"github.com/openmerlin/gitea_data/modules/context"
 )
 
 // tplSwaggerV1Json swagger v1 json template
