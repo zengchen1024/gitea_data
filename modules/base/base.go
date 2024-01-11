@@ -3,7 +3,6 @@
 
 package base
 
-type (
-	// TplName template relative path type
-	TplName string
-)
+import "code.gitea.io/gitea/modules/base"
+
+type TplName = base.TplName
