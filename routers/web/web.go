@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"strings"
 
-	"code.gitea.io/gitea/models/db"
 	"code.gitea.io/gitea/modules/context"
 	"code.gitea.io/gitea/modules/log"
 	"code.gitea.io/gitea/modules/metrics"
@@ -17,6 +16,7 @@ import (
 	"code.gitea.io/gitea/routers/common"
 	auth_service "code.gitea.io/gitea/services/auth"
 	auth_model "github.com/openmerlin/gitea_data/models/auth"
+	"github.com/openmerlin/gitea_data/models/db"
 	"github.com/openmerlin/gitea_data/modules/setting"
 	"github.com/openmerlin/gitea_data/routers/web/misc"
 	"github.com/openmerlin/gitea_data/services/lfs"
