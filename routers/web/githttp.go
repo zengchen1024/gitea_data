@@ -6,11 +6,11 @@ package web
 import (
 	"net/http"
 
-	"code.gitea.io/gitea/modules/context"
+	"github.com/openmerlin/gitea_data/modules/context"
 	"github.com/openmerlin/gitea_data/modules/setting"
-	"code.gitea.io/gitea/modules/web"
-	context_service "code.gitea.io/gitea/services/context"
+	"github.com/openmerlin/gitea_data/modules/web"
 	"github.com/openmerlin/gitea_data/routers/web/repo"
+	context_service "github.com/openmerlin/gitea_data/services/context"
 )
 
 func requireSignIn(ctx *context.Context) {
